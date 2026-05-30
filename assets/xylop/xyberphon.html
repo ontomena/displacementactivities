@@ -1,0 +1,95 @@
+---
+layout: none
+permalink: /xyberphon/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xyberphon</title>
+<style>
+  /* --- faithful to the original: black ground, the old link colours --- */
+  html, body { margin: 0; padding: 0; background: #000; color: #fff; }
+  a       { color: #3399FF; }
+  a:visited { color: #0066CC; }
+  a:active  { color: #CC0033; }
+
+  body {
+    min-height: 100vh; box-sizing: border-box;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1.5rem; padding: 2.5rem 1rem;
+    font: 15px/1.5 ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #banner { width: 300px; max-width: 90vw; height: auto; image-rendering: auto; }
+
+  /* the instrument sits where the Flash <object> used to, at its native 475x210 */
+  #stage {
+    width: min(95vw, 475px);
+    aspect-ratio: 475 / 210;
+    background: #000;
+  }
+  #stage > * { width: 100%; height: 100%; }
+
+  #fallback { display: none; max-width: 34rem; text-align: center; color: #c98; font-size: 0.85rem; }
+  #fallback code { color: #ddd; }
+</style>
+</head>
+<body>
+
+  <!--
+       TWO PATHS TO CHECK against where things actually live on DA:
+         1. the banner <img src> just below
+         2. the XYLOP_BASE constant in the script at the foot of the page
+       Both are root-relative (start with "/"), which is what DA wants.
+  -->
+
+  <img id="banner" src="/assets/xyberphon.jpg" width="300" height="100" alt="xyberphon">
+
+  <div id="stage"></div>
+
+  <p id="fallback">
+    The instrument needs the page served over <code>http(s)://</code> and the xylop bundle
+    reachable at <code id="basepath"></code>. Opened from a bare <code>file://</code> path,
+    or with that folder missing, Ruffle can't load.
+  </p>
+
+<script>
+  // Where you dropped the xylop bundle in DA's assets. Change this one line if needed.
+  const XYLOP_BASE = "/assets/xylop";
+
+  document.getElementById("basepath").textContent = XYLOP_BASE + "/";
+
+  function showFallback() { document.getElementById("fallback").style.display = "block"; }
+
+  function bootRuffle() {
+    try {
+      window.RufflePlayer = window.RufflePlayer || {};
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      document.getElementById("stage").appendChild(player);
+      // 0.2.0 selfhosted exposes load() via .ruffle(); newer builds expose it directly.
+      const api = (typeof player.ruffle === "function") ? player.ruffle() : player;
+      api.load({
+        url: XYLOP_BASE + "/xylop.swf",
+        autoplay: "on",
+        scale: "showAll",
+        wmode: "opaque",
+        backgroundColor: "#000000"
+      });
+    } catch (e) {
+      console.error(e);
+      showFallback();
+    }
+  }
+
+  // pull in Ruffle from the bundle, then start
+  const s = document.createElement("script");
+  s.src = XYLOP_BASE + "/ruffle/ruffle.js";
+  s.onload = bootRuffle;
+  s.onerror = showFallback;
+  document.head.appendChild(s);
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xylop</title>
+<style>
+  :root { --stage-w: 475px; --stage-h: 210px; }
+  html, body {
+    margin: 0; padding: 0; min-height: 100%;
+    background: #000; color: #cfcfcf;
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main {
+    min-height: 100vh; box-sizing: border-box;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1.25rem; padding: 2rem 1rem;
+  }
+  h1 { margin: 0; font-weight: 400; letter-spacing: 0.35em; text-transform: lowercase; font-size: 1.1rem; color: #e8e8e8; }
+  #stage {
+    width: min(95vw, calc(var(--stage-w) * 1.6));
+    aspect-ratio: 475 / 210;
+    background: #000;
+    box-shadow: 0 0 0 1px #1f1f1f, 0 18px 60px rgba(0,0,0,0.6);
+  }
+  #stage > * { width: 100%; height: 100%; }   /* Ruffle player fills the stage */
+  p.caption { margin: 0; max-width: 38rem; text-align: center; color: #8a8a8a; font-size: 0.85rem; }
+  p.caption a { color: #b8b8b8; }
+  #fallback { display: none; color: #c98; max-width: 38rem; text-align: center; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>xylop</h1>
+  <div id="stage"></div>
+  <p id="fallback">Couldn't start the Flash runtime. This page must be served over <code>http(s)://</code>
+     (e.g. <code>python3&nbsp;-m&nbsp;http.server</code>), not opened directly from a <code>file://</code> path.</p>
+  <p class="caption">Original Flash&nbsp;4 piece, run in the browser via
+     <a href="https://ruffle.rs" rel="noopener">Ruffle</a> — an open-source Flash emulator (WebAssembly). No plugin required.</p>
+</main>
+
+<script src="ruffle/ruffle.js"></script>
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("DOMContentLoaded", function () {
+    try {
+      var ruffle = window.RufflePlayer.newest();
+      var player = ruffle.createPlayer();
+      document.getElementById("stage").appendChild(player);
+      // 0.2.0 selfhosted exposes load() via .ruffle(); newer builds expose it directly.
+      var api = (typeof player.ruffle === "function") ? player.ruffle() : player;
+      api.load({
+        url: "xylop.swf",
+        autoplay: "on",
+        scale: "showAll",
+        wmode: "opaque",
+        backgroundColor: "#000000"
+      });
+    } catch (e) {
+      console.error(e);
+      document.getElementById("fallback").style.display = "block";
+    }
+  });
+</script>
+</body>
+</html>

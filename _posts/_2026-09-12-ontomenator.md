@@ -16,7 +16,7 @@ My first motivation was to try and make some kind of sense out of a lifetime of 
 During the DYCP (2025-26), I developed my woefully neglected coding skills and eventually managed to construct the map's basic template and initial set of connections with Anthropic's Claude/AI. It has been very interesting discussing such an unlikely array of connections with the All-knowing Entity that 'can make mistakes'. Gosh, yes, can't it just! At present, the aesthetic is deliberately clunky, because it reflects the basic ethos underlying the ideas. Even if I could build something smooth and slick, I don't think that would be appropriate. It is Heath-Robinson, rather than Sony Walkman. 
 
 # What exactly is the Ontomenator
-Above all, this is a work in progress (or regress!). Much of the content is provisional and incomplete. I will be editing it for as long as I am able, I expect.
+The Ontomenator is a work in progress (or regress!). Much of the content is provisional and incomplete. I will be editing it for as long as I am able, I expect. That said, there's now plenty to go at.
 
 It is a series of 41 'Nodes', and each main node may have sub-node/s, or 'Folded Aspects', as they are termed here. There is no limit to the number folded aspects a nde may have, some still have none. The map includes a bibliography of all the main texts and sites referenced. There is also a glossary for some of the less well-known terms, and a list of specific keyboard shortcuts to facilitate navigation. 
 

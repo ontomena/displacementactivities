@@ -44,8 +44,6 @@ insta/threads: [@simonbrdly](https://www.instagram.com/simonbrdly)
 bandcamp: [simonbradley](https://simonbradley.bandcamp.com/)
 
 
-<p align="center"><img src="{{ '/assets/images/Magnetopus.jpg' | relative_url }}" alt="Magnet Opus image"></p>
-
 <p align="center"><img src="{{ '/assets/images/grant_jpeg_black.jpg' | relative_url }}" alt="Arts Council Logo"></p>
 
 

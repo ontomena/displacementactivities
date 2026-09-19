@@ -18,13 +18,14 @@ During the DYCP (2025-26), I developed my neglected coding skills and eventually
 # What exactly is the Ontomenator
 The Ontomenator is a work in progress (or regress!). Much of the content is provisional and incomplete. A piece of conceptual art in the unmaking. I will be editing it for as long as I am able, I expect. That said, there's now plenty to go at.
 
-It is a series of 41 'Nodes', and each main node may have sub-node/s, or 'Folded Aspects', as they are termed here. There is no limit to the number folded aspects a nde may have, some still have none. The map includes a bibliography of all the main texts and sites referenced. There is also a glossary for some of the less well-known terms, and a list of specific keyboard shortcuts to facilitate navigation. 
+It is a series of 41 'Nodes', and each main node may have sub-node/s, or 'Folded Aspects', as they are termed here. There is no limit to the number folded aspects a node may have, some still have none. Connections between nodes are illustrated by dotted lines and links in the nodes themselves. The map includes a bibliography of all the main texts and sites referenced. There is also a glossary for some of the less well-known terms, and a list of specific keyboard shortcuts to facilitate navigation. 
 
-The nodes are arranged in a 'Route', and this can be shuffled or re-arranged according to the user's choice. A fundamental notion guiding the nodes and the route is that everything is equal, it is a flat hierarchy. As in life, we might choose where we go, but when we've been there, there will be a where-we-went. To almost all intents and purposes our route will be linear in time/space single we are single entities. We may avoid nodes and re-visit others, that is the way with the Ontomenator.
+The nodes are arranged in a 'Route', and this can be shuffled or re-arranged according to the user's choice. A fundamental notion guiding the nodes and the route is that everything is equal, it is a flat hierarchy. As in life, we might choose where we go, but once we've been there, there will be a where-we-went. To almost all intents and purposes our route will be linear in time/space single we are single entities. We may avoid nodes and re-visit others, that is the way with the Ontomenator. It is arrange by, with, through and over time.
 
 The route may be viewed as a 'Presentation', which is similar to a full-screen slideshow. The spacebar and arrows may be used to navigate. There is a keyboard shortcuts menu included in the main map. 
+
 # How do I access it
-The Ontomenator is designed to be used on a Desktop device. A large-ish screen is advised so that you can see the full array with all the connections and be able to zoom in and out. Laptops are fine, and probably pads, but I don't know. It works on mobile, but then is best seen as a list (Route order), because the map is a bit unweildy for small screens.  
+The Ontomenator is designed to be used on a Desktop device. A large-ish screen is preferred so that you can see the full array with all the connections and be able to zoom in and out. Laptops are fine, and probably pads, but I don't know. It works on mobile, but then is best seen as a list (Route order), because the map is a bit unweildy for small screens (at least it is on mine).  
 
 [HERE](https://www.displacementactivities.org/ontomenator/) it is!
 

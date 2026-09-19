@@ -33,7 +33,7 @@ If you'd like to experiment, I have made a blank template with basic instruction
 
 <a href="/assets/downloads/ontomenator-template.zip" download>Download blank Ontomenator template here</a>
 
-Any questions or constructive comments, you can get in touch via the website contact form. I don't take any responsibility for any issues that may arise from using it, but there isn't anything to worry about. 
+Any questions or interesting comments, you can get in touch via the website contact form. I don't take any responsibility for any issues that may arise from using it, but there isn't anything to worry about. 
 
 
 
